@@ -1,0 +1,19 @@
+{
+  "name": "cita-observables",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Keith-CY/cita-observables.git",
+  "author": "Keith <keithwhisper@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.1",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "@reactivex/rxjs": "^5.5.8",
+    "cita-web3-plugin": "^1.0.2"
+  }
+}
