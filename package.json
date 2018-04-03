@@ -1,6 +1,6 @@
 {
   "name": "cita-observables",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "repository": "https://github.com/Keith-CY/cita-observables.git",
   "author": "Keith <keithwhisper@gmail.com>",
