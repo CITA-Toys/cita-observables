@@ -1,17 +1,21 @@
-import { Observable, ReplaySubject } from '@reactivex/rxjs';
+import { Observable, ConnectableObservable } from '@reactivex/rxjs';
+export declare type CITAInterval = number;
+export declare type BlockNumber = number;
+export declare type ServerAddr = string;
+export declare type BlockHash = string;
 export default class CITAObservables {
-    server: string;
-    interval: string | number;
+    server: ServerAddr;
+    interval: CITAInterval;
     CitaWeb3: any;
+    newBlockByNumberSubject: ConnectableObservable<any>;
     constructor({server, interval}: {
-        server: string;
-        interval?: string | number;
+        server: ServerAddr;
+        interval?: CITAInterval;
     });
-    newBlockNumber$: (interval: any) => Observable<{}>;
-    blockByNumber$: (blockNumber: string) => Observable<{}>;
-    blockByHash$: (blockHash: string) => Observable<{}>;
-    newBlockByNumber$: (interval: any) => Observable<{}>;
-    peerCount$: (interval: any) => Observable<{}>;
-    multicastedNewBlockByNumber$: (interval: any) => ReplaySubject<{}>;
+    newBlockNumber: (interval: number) => Observable<{}>;
+    blockByNumber: (blockNumber: number) => Observable<{}>;
+    blockByHash: (blockHash: string) => Observable<{}>;
+    newBlockByNumber$: (interval: number) => Observable<{}>;
+    peerCount: (interval: number) => Observable<{}>;
     sendTransaction$: (signedData: any) => Observable<{}>;
 }
