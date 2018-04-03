@@ -20,8 +20,8 @@ axios@^0.18.0:
     is-buffer "^1.1.5"
 
 cita-web3-plugin@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/cita-web3-plugin/-/cita-web3-plugin-1.0.2.tgz#d05e461d39cc1894c25c750a985934c6a7cc7bb9"
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/cita-web3-plugin/-/cita-web3-plugin-1.0.4.tgz#0466d5984636a60d5f3bb01766a40947eb40ba3f"
   dependencies:
     axios "^0.18.0"
 
