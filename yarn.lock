@@ -19,9 +19,9 @@ axios@^0.18.0:
     follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
 
-cita-web3-plugin@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/cita-web3-plugin/-/cita-web3-plugin-1.0.4.tgz#0466d5984636a60d5f3bb01766a40947eb40ba3f"
+cita-web3-plugin@^1.0.8:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/cita-web3-plugin/-/cita-web3-plugin-1.0.9.tgz#527c4ad04cb516da3ae051d010661c3e176dc45c"
   dependencies:
     axios "^0.18.0"
 
