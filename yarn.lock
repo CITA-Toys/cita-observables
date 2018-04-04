@@ -520,9 +520,9 @@ ci-info@^1.0.0:
   version "1.1.3"
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-1.1.3.tgz#710193264bb05c77b8c90d02f5aaf22216a667b2"
 
-cita-web3-plugin@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.npmjs.org/cita-web3-plugin/-/cita-web3-plugin-1.0.13.tgz#c62de90a049767342a720cefb86e665f49b40166"
+cita-web3-plugin@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.npmjs.org/cita-web3-plugin/-/cita-web3-plugin-1.0.14.tgz#2471afeb6f49326557c24e4de49079fbfdb6220b"
   dependencies:
     axios "^0.18.0"
 
