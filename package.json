@@ -1,10 +1,10 @@
 {
   "name": "cita-observables",
   "version": "1.0.8",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/Keith-CY/cita-observables.git",
   "author": "Keith <keithwhisper@gmail.com>",
-  "types": "./dist/index.d.ts",
+  "types": "lib/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
