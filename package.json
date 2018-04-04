@@ -8,14 +8,16 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prepublish": "yarn run build"
+    "test": "jest",
+    "prepublish": "yarn run test"
   },
   "devDependencies": {
     "@types/node": "^9.6.1",
+    "jest": "^22.4.3",
     "typescript": "^2.8.1"
   },
   "dependencies": {
     "@reactivex/rxjs": "^5.5.8",
-    "cita-web3-plugin": "^1.0.9"
+    "cita-web3-plugin": "^1.0.13"
   }
 }

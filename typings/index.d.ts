@@ -6,6 +6,7 @@ declare type BlockHash = string
 declare type ReservedRecords = number
 
 declare type JSONRPCResult = string | object
+declare type ID = number
 
 interface JSONRPCError {
   code: string
