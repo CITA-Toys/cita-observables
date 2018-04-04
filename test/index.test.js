@@ -33,13 +33,10 @@ test('request block by number', () => {
 })
 
 test('request new block by number', () => {
-  console.log('TEST1')
   citaObservables.newBlockByNumber(INTERVAL).subscribe(block => {
-    console.log('TEST2')
     expect.assertions(1)
     expect(block.startsWith('0x')).toBeTruthy()
   })
-  console.log('TEST3')
 })
 
 test('request block by hash', () => {
