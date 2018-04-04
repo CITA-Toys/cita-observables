@@ -20,7 +20,18 @@ $ yarn add cita-observables
 # Example
 
 ```javascript
+import CITAObservables from 'cita-observables'
+
+const SERVER = 'localhost:1337'
 const INTERVAL = 10
+const RESERVED_RECORDS = 10
+
+const citaObservables = new CITAObservables({
+  server: SERVER,
+  interval: INTERVAL,
+  reservedRecords: RESERVED_RECORDS,
+})
+
 /**
  * @function peerCount
  * @description subscribe to the count of peer
