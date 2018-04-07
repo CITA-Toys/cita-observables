@@ -14,7 +14,7 @@ Observable based [CITA RPC](https://cryptape.github.io/cita/usage-guide/rpc/) to
 # Installing
 
 ```bash
-$ yarn add cita-observables
+$ yarn add @cita/observables
 ```
 
 # Example
