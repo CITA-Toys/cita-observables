@@ -1,6 +1,8 @@
-const { default: CITAObservables } = require('../lib')
+const {
+  default: CITAObservables
+} = require('../lib')
 
-const SERVER = '39.104.94.244:1301'
+const SERVER = 'http://39.104.94.244:1301'
 const INTERVAL = 10
 const RESERVED_RECORDS = 10
 
