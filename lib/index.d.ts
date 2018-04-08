@@ -1,7 +1,7 @@
 /// <reference path="../typings/index.d.ts" />
 import { Observable, ConnectableObservable } from '@reactivex/rxjs';
-import { CITA } from 'cita-web3-plugin';
-import { JSONRPCError } from 'cita-web3-plugin/lib/index.d';
+import { CITA } from '@cita/web3-plugin';
+import { JSONRPCError } from '@cita/web3-plugin/lib/index.d';
 export default class CITAObservables {
     server: ServerAddr;
     interval: CITAInterval;
@@ -18,4 +18,8 @@ export default class CITAObservables {
     newBlockByNumber: (interval: number) => Observable<string | object | JSONRPCError>;
     peerCount: (interval: number) => Observable<string | object | JSONRPCError>;
     sendTransaction: (signedData: any) => Observable<string | object | JSONRPCError>;
+    blockHistory: ({ by, count }: {
+        by: string;
+        count: number;
+    }) => Observable<(string | object | JSONRPCError)[]>;
 }

@@ -1,6 +1,4 @@
-const {
-  default: CITAObservables
-} = require('../lib')
+const { default: CITAObservables } = require('../lib')
 
 const SERVER = 'http://39.104.94.244:1301'
 const INTERVAL = 10
@@ -51,3 +49,7 @@ test('request block by hash', () => {
 })
 
 //TODO: sendTransaction
+
+// test('request block history', () => {
+//TODO:
+// })
