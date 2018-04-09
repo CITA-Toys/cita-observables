@@ -16,9 +16,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@cita/web3-plugin@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.npmjs.org/@cita/web3-plugin/-/web3-plugin-1.0.16.tgz#f8e1d66b0284a4bd11360cc8508853c86a32a4d6"
+"@cita/web3-plugin@1.0.17":
+  version "1.0.17"
+  resolved "https://registry.npmjs.org/@cita/web3-plugin/-/web3-plugin-1.0.17.tgz#d59d2a110f30c94236671f479943afe8b6af7e90"
   dependencies:
     axios "^0.18.0"
 

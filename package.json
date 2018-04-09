@@ -17,7 +17,7 @@
     "typescript": "^2.8.1"
   },
   "dependencies": {
-    "@cita/web3-plugin": "^1.0.16",
+    "@cita/web3-plugin": "1.0.17",
     "@reactivex/rxjs": "^5.5.8"
   }
 }
