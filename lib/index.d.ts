@@ -12,11 +12,11 @@ export default class CITAObservables {
         interval?: CITAInterval;
         reservedRecords?: ReservedRecords;
     });
-    newBlockNumber: (interval: number) => Observable<any>;
+    newBlockNumber: (interval?: number, observed?: boolean) => Observable<any>;
     blockByNumber: (blockNumber: string) => Observable<string | object | JSONRPCError>;
     blockByHash: (blockHash: string) => Observable<string | object | JSONRPCError>;
-    newBlockByNumber: (interval: number) => Observable<string | object | JSONRPCError>;
-    peerCount: (interval: number) => Observable<string | object | JSONRPCError>;
+    newBlockByNumber: (interval?: number, observed?: boolean) => Observable<string | object | JSONRPCError>;
+    peerCount: (interval?: number, observed?: boolean) => Observable<string | object | JSONRPCError>;
     sendTransaction: (signedData: any) => Observable<string | object | JSONRPCError>;
     blockHistory: ({ by, count }: {
         by: string;

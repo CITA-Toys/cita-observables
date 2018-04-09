@@ -36,6 +36,7 @@ const citaObservables = new CITAObservables({
  * @function peerCount
  * @description subscribe to the count of peer
  * @param {string} interval - interval of observable
+ * @param {boolean} observed - switch of observable, default to true, observing the peerCount
  * @return {string} count - peer count
  */
 citaObservables.peerCount(INTERVAL).subscribe(count => {
@@ -46,6 +47,7 @@ citaObservables.peerCount(INTERVAL).subscribe(count => {
  * @function newBlockNumber
  * @description subscribe to the latest block number
  * @param {string} interval - interval of observable
+ * @param {boolean} observed - switch of observable, default to true, observing the new block number
  * @return {string} blockNumber - block number
  */
 citaObservables.newBlockNumber(INTERVAL).subscribe(blockNumber => {
@@ -66,6 +68,7 @@ citaObservables.blockByNumber(blockNumber).subscribe(block => {
  * @function newBlockByNumber
  * @description subscribe to lastest block
  * @param {string} interval - interval of observable
+ * @param {boolean} observed - switch of observable, default to true, observing the new block
  * @return {object} block
  */
 citaObservables.newBlockByNumber(INTERVAL).subscribe(block => {
