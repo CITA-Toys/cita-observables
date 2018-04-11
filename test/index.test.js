@@ -74,6 +74,7 @@ test('request block by hash', () => {
 })
 
 //TODO: sendTransaction
+// TODO: rest observables
 
 // test('request block history', () => {
 //TODO:
