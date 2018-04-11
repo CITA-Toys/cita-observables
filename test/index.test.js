@@ -23,9 +23,34 @@ test('request new block number', () => {
   })
 })
 
-test('request block by number', () => {
+test.skip('request block by number of earliest', () => {
   citaObservables.newBlockNumber(INTERVAL).subscribe(blockNumber => {
     citaObservables.blockByNumber(blockNumber).subscribe(block => {
+      expect.assertions(1)
+      expect(block.header.number).toBe(blockNumber)
+    })
+  })
+})
+
+test('request block by number of latest', () => {
+  citaObservables.blockByNumber('latest').subscribe(block => {
+    expect.assertions(1)
+    expect(block.header.number.startsWith('0x')).toBeTruthy()
+  })
+})
+
+test('request block by number of hash', () => {
+  citaObservables.newBlockNumber(INTERVAL).subscribe(blockNumber => {
+    citaObservables.blockByNumber(blockNumber).subscribe(block => {
+      expect.assertions(1)
+      expect(block.header.number).toBe(blockNumber)
+    })
+  })
+})
+
+test('request block by number of integer', () => {
+  citaObservables.newBlockNumber(INTERVAL).subscribe(blockNumber => {
+    citaObservables.blockByNumber(+blockNumber).subscribe(block => {
       expect.assertions(1)
       expect(block.header.number).toBe(blockNumber)
     })
