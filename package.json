@@ -1,6 +1,6 @@
 {
   "name": "@cita/observables",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "lib/index.js",
   "repository": "https://github.com/Keith-CY/cita-observables.git",
   "author": "Keith <keithwhisper@gmail.com>",
@@ -17,7 +17,7 @@
     "typescript": "^2.8.1"
   },
   "dependencies": {
-    "@cita/web3-plugin": "1.0.17",
+    "@cita/web3-plugin": "1.0.20",
     "@reactivex/rxjs": "^5.5.8"
   }
 }
