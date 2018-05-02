@@ -1,6 +1,8 @@
-const { default: CITAObservables } = require('../lib')
+const {
+  default: CITAObservables
+} = require('../lib')
 
-const SERVER = 'http://39.104.94.244:1301'
+const SERVER = 'http://47.75.129.215:1337'
 const INTERVAL = 10
 const RESERVED_RECORDS = 10
 
@@ -70,6 +72,15 @@ test('request block by hash', () => {
   citaObservables.blockByHash(HASH).subscribe(block => {
     expect.assertions(1)
     expect(block.hash).toBe(HASH)
+  })
+})
+
+test('get meta data', () => {
+  citaObservables.metaData({
+    blockNumber: '0x0'
+  }).subscribe(metaData => {
+    expect.assertions(1)
+    expect(metaData.chainId).toBeTruthy()
   })
 })
 
