@@ -50,4 +50,8 @@ export default class CITAObservables {
     metaData: ({ blockNumber }: {
         blockNumber: string;
     }) => Observable<string | object | Transaction | JSONRPCError>;
+    getBalance: ({ addr, blockNumber, }: {
+        addr: string;
+        blockNumber: string;
+    }) => Observable<string | object | Transaction | JSONRPCError>;
 }

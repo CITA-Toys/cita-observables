@@ -1,6 +1,4 @@
-const {
-  default: CITAObservables
-} = require('../lib')
+const { default: CITAObservables } = require('../lib')
 
 const SERVER = 'http://47.75.129.215:1337'
 const INTERVAL = 10
@@ -76,12 +74,25 @@ test('request block by hash', () => {
 })
 
 test('get meta data', () => {
-  citaObservables.metaData({
-    blockNumber: '0x0'
-  }).subscribe(metaData => {
-    expect.assertions(1)
-    expect(metaData.chainId).toBeTruthy()
-  })
+  citaObservables
+    .metaData({
+      blockNumber: '0x0',
+    })
+    .subscribe(metaData => {
+      expect.assertions(1)
+      expect(metaData.chainId).toBeTruthy()
+    })
+})
+
+test.skip("get balance of ${'0x627306090abaB3A6e1400e9345bC60c78a8BEf57'}", () => {
+  citaObservables
+    .getBalance({
+      addr: '0x627306090abaB3A6e1400e9345bC60c78a8BEf57',
+    })
+    .subscribe(balance => {
+      expect.assertion(1)
+      expect(balance.startsWith('0x')).toBeTruthy()
+    })
 })
 
 //TODO: sendTransaction
