@@ -9,7 +9,7 @@ Observable based [CITA RPC](https://cryptape.github.io/cita/usage-guide/rpc/) to
 
 # Features
 
-* Supports Observable API
+- Supports Observable API
 
 # Installing
 
@@ -84,4 +84,11 @@ citaObservables.newBlockByNumber(INTERVAL).subscribe(block => {
 citaObservables.blockByHash(HASH).subscribe(block => {
   console.log(block)
 })
+
+/**
+ * @function newBlockByNumberSubject
+ * @description subscribe to new block
+ */
+citaObservable.newBlockByNumberSubject.subscribe(console.log)
+citaObservable.newBlockByNumberSubject.connect()
 ```
