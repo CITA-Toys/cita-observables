@@ -16,9 +16,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@cita/web3-plugin@^1.0.25":
-  version "1.0.26"
-  resolved "https://registry.npmjs.org/@cita/web3-plugin/-/web3-plugin-1.0.26.tgz#cc962d919fe59003e3b4553b117dcec1b1ee7695"
+"@cita/web3-plugin@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.npmjs.org/@cita/web3-plugin/-/web3-plugin-1.0.27.tgz#c4fcb85678cb139982cfb8380cdeba4b7b19ecfa"
   dependencies:
     "@types/google-protobuf" "^3.2.7"
     axios "^0.18.0"
