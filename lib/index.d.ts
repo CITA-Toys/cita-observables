@@ -1,11 +1,10 @@
 /// <reference path="../typings/index.d.ts" />
 import { Observable, ConnectableObservable } from '@reactivex/rxjs';
-import { CITA, Transaction } from '@cita/web3-plugin';
-import { JSONRPCError } from '@cita/web3-plugin/lib/index.d';
-export default class CITAObservables {
+import { CITA } from '@nervos/web3-plugin';
+export default class NervosObservables {
     server: ServerAddr;
     interval: CITAInterval;
-    CitaWeb3: CITA;
+    NervosWeb3: CITA;
     newBlockByNumberSubject: ConnectableObservable<any>;
     constructor({server, interval, reservedRecords}: {
         server: ServerAddr;
@@ -14,44 +13,44 @@ export default class CITAObservables {
     });
     setServer: (server: string) => void;
     newBlockNumber: (interval?: number, observed?: boolean) => Observable<any>;
-    blockByNumber: (blockNumber: string | number) => Observable<JSONRPCResult>;
-    blockByHash: (blockHash: string) => Observable<JSONRPCResult>;
-    newBlockByNumber: (interval?: number, observed?: boolean) => Observable<JSONRPCResult>;
-    peerCount: (interval?: number, observed?: boolean) => Observable<string | object | Transaction | JSONRPCError>;
-    sendTransaction: (signedData: any) => Observable<string | object | Transaction | JSONRPCError>;
+    blockByNumber: (blockNumber: any) => Observable<{}>;
+    blockByHash: (blockHash: string) => Observable<{}>;
+    newBlockByNumber: (interval?: number, observed?: boolean) => Observable<{}>;
+    peerCount: (interval?: number, observed?: boolean) => Observable<{}>;
+    sendTransaction: (signedData: any) => Observable<{}>;
     blockHistory: (params: {
-        by: string | number;
+        by: any;
         count: number;
-    }) => Observable<JSONRPCResult[]>;
+    }) => Observable<{}>;
     getLogs: ({ topics, fromBlock, }: {
-        topics: string[];
-        fromBlock: string | number;
-    }) => Observable<string | object | Transaction | JSONRPCError>;
+        topics: any[];
+        fromBlock: any;
+    }) => Observable<{}>;
     ethCall: (params: {
-        from: string;
-        to: string;
+        from: any;
+        to: any;
         data: string;
-        blockNumber: string | number;
-    }) => Observable<string | object | Transaction | JSONRPCError>;
-    getTransaction: (hash: string) => Observable<Transaction>;
+        blockNumber: any;
+    }) => Observable<{}>;
+    getTransaction: (hash: any) => Observable<{}>;
     getTransactionCount: (params: {
-        accountAddr: string;
-        blockNumber: string | number;
-    }) => Observable<string | object | Transaction | JSONRPCError>;
+        addr: any;
+        blockNumber: any;
+    }) => Observable<{}>;
     getCode: (params: {
-        contractAddr: string;
-        blockNumber: string | number;
-    }) => Observable<string | object | Transaction | JSONRPCError>;
+        contractAddr: any;
+        blockNumber: any;
+    }) => Observable<{}>;
     getAbi: (params: {
-        contractAddr: string;
-        blockNumber: string | number;
-    }) => Observable<string | object | Transaction | JSONRPCError>;
-    getTransactionProof: (hash: string) => Observable<string | object | Transaction | JSONRPCError>;
+        contractAddr: any;
+        blockNumber: any;
+    }) => Observable<{}>;
+    getTransactionProof: (hash: any) => Observable<{}>;
     metaData: ({ blockNumber }: {
-        blockNumber: string | number;
+        blockNumber: any;
     }) => Observable<{}>;
     getBalance: ({ addr, blockNumber, }: {
-        addr: string;
-        blockNumber: string | number;
-    }) => Observable<string | object | Transaction | JSONRPCError>;
+        addr: any;
+        blockNumber: any;
+    }) => Observable<{}>;
 }

@@ -16,9 +16,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@cita/web3-plugin@^1.0.27":
-  version "1.0.27"
-  resolved "https://registry.npmjs.org/@cita/web3-plugin/-/web3-plugin-1.0.27.tgz#c4fcb85678cb139982cfb8380cdeba4b7b19ecfa"
+"@nervos/web3-plugin@^0.17.5":
+  version "0.17.5"
+  resolved "https://registry.npmjs.org/@nervos/web3-plugin/-/web3-plugin-0.17.5.tgz#1ba3172dac0824a9fb4494dd6dc68c4fe802847a"
   dependencies:
     "@types/google-protobuf" "^3.2.7"
     axios "^0.18.0"
@@ -1125,8 +1125,8 @@ globals@^9.18.0:
   resolved "https://registry.npmjs.org/globals/-/globals-9.18.0.tgz#aa3896b3e69b487f17e31ed2143d69a8e30c2d8a"
 
 google-protobuf@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.npmjs.org/google-protobuf/-/google-protobuf-3.5.0.tgz#b8cc63c74d83457bd8a9a904503c8efb26bca339"
+  version "3.6.0"
+  resolved "https://registry.npmjs.org/google-protobuf/-/google-protobuf-3.6.0.tgz#e2bafb00c20a8734174d8f89e0a842709e2ceed0"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.1.11"
