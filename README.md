@@ -86,6 +86,16 @@ citaObservables.blockByHash(HASH).subscribe(block => {
 })
 
 /**
+ * @function sendSignedTransaction
+ * @description send signed transaction
+ * @param {string} signedTransaction - signed transaction
+ * @return {object} result
+ */
+citaObservables.sendSignedTransaction(signedTransaction).subscribe(result => {
+  console.log(result)
+})
+
+/**
  * @function newBlockByNumberSubject
  * @description subscribe to new block
  */
