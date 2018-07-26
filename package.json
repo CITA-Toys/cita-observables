@@ -1,6 +1,6 @@
 {
   "name": "@nervos/observables",
-  "version": "0.17.4",
+  "version": "0.17.5",
   "main": "lib/index.js",
   "repository": "https://github.com/Keith-CY/cita-observables.git",
   "author": "Keith <keithwhisper@gmail.com>",
