@@ -1,6 +1,6 @@
 {
   "name": "@nervos/observables",
-  "version": "0.17.6",
+  "version": "0.17.7",
   "main": "lib/index.js",
   "repository": "https://github.com/Keith-CY/cita-observables.git",
   "author": "Keith <keithwhisper@gmail.com>",
@@ -17,7 +17,7 @@
     "typescript": "^2.8.1"
   },
   "dependencies": {
-    "@nervos/web3-plugin": "^0.17.8",
+    "@nervos/web3-plugin": "^0.17.10",
     "@reactivex/rxjs": "^5.5.8"
   }
 }
