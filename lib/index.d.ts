@@ -1,10 +1,11 @@
 /// <reference path="../typings/index.d.ts" />
 import { Observable, ConnectableObservable } from '@reactivex/rxjs';
-import { CITA } from '@nervos/web3-plugin';
+import { Nervos } from '@nervos/web3-plugin';
+import { Chain, RpcResult } from '@nervos/web3-plugin/lib/typings/index.d';
 export default class NervosObservables {
     server: ServerAddr;
     interval: CITAInterval;
-    NervosWeb3: CITA;
+    NervosWeb3: Nervos;
     newBlockByNumberSubject: ConnectableObservable<any>;
     constructor({server, interval, reservedRecords}: {
         server: ServerAddr;
@@ -13,44 +14,46 @@ export default class NervosObservables {
     });
     setServer: (server: string) => void;
     newBlockNumber: (interval?: number, observed?: boolean) => Observable<any>;
-    blockByNumber: (blockNumber: any) => Observable<{}>;
-    blockByHash: (blockHash: string) => Observable<{}>;
-    newBlockByNumber: (interval?: number, observed?: boolean) => Observable<{}>;
-    peerCount: (interval?: number, observed?: boolean) => Observable<{}>;
-    sendTransaction: (signedData: any) => Observable<{}>;
+    blockByNumber: (blockNumber: string) => Observable<RpcResult.Result>;
+    blockByHash: (blockHash: string) => Observable<RpcResult.Result>;
+    newBlockByNumber: (interval?: number, observed?: boolean) => Observable<any>;
+    peerCount: (interval?: number, observed?: boolean) => Observable<string>;
+    sendSignedTransaction: (signedData: any) => Observable<RpcResult.sendRawTransaction>;
     blockHistory: (params: {
-        by: any;
+        by: string;
         count: number;
-    }) => Observable<{}>;
+    }) => Observable<Chain.Block<Chain.TransactionInBlock>[]>;
     getLogs: ({ topics, fromBlock, }: {
-        topics: any[];
-        fromBlock: any;
-    }) => Observable<{}>;
+        topics: string[];
+        fromBlock: string;
+    }) => Observable<Chain.Log[]>;
     ethCall: (params: {
-        from: any;
-        to: any;
-        data: string;
-        blockNumber: any;
-    }) => Observable<{}>;
-    getTransaction: (hash: any) => Observable<{}>;
+        callObject: {
+            from?: string;
+            to: string;
+            data: string;
+        };
+        blockNumber: string;
+    }) => Observable<RpcResult.Result>;
+    getTransaction: (hash: string) => Observable<Chain.TransactionInBlock>;
     getTransactionCount: (params: {
-        addr: any;
-        blockNumber: any;
-    }) => Observable<{}>;
+        addr: string;
+        blockNumber: string;
+    }) => Observable<string>;
     getCode: (params: {
-        contractAddr: any;
-        blockNumber: any;
-    }) => Observable<{}>;
+        contractAddr: string;
+        blockNumber: string;
+    }) => Observable<string>;
     getAbi: (params: {
-        contractAddr: any;
-        blockNumber: any;
-    }) => Observable<{}>;
-    getTransactionProof: (hash: any) => Observable<{}>;
+        contractAddr: string;
+        blockNumber: string;
+    }) => Observable<string>;
+    getTransactionProof: (hash: string) => Observable<string>;
     metaData: ({ blockNumber }: {
-        blockNumber: any;
-    }) => Observable<{}>;
+        blockNumber: string;
+    }) => Observable<Chain.MetaData>;
     getBalance: ({ addr, blockNumber, }: {
-        addr: any;
-        blockNumber: any;
-    }) => Observable<{}>;
+        addr: string;
+        blockNumber: string;
+    }) => Observable<string>;
 }

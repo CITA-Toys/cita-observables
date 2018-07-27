@@ -17,8 +17,8 @@
     js-tokens "^3.0.0"
 
 "@nervos/web3-plugin@^0.17.8":
-  version "0.17.8"
-  resolved "https://registry.npmjs.org/@nervos/web3-plugin/-/web3-plugin-0.17.8.tgz#32ec2209bd615dbc53100aa746afee5e5835152e"
+  version "0.17.10"
+  resolved "https://registry.npmjs.org/@nervos/web3-plugin/-/web3-plugin-0.17.10.tgz#f3b189af08f1c8798c1c1e748f7cca95af1d2b6f"
   dependencies:
     "@types/google-protobuf" "^3.2.7"
     axios "^0.18.0"
