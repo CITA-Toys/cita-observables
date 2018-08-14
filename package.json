@@ -19,5 +19,9 @@
   "dependencies": {
     "@nervos/web3-plugin": "^0.17.10",
     "@reactivex/rxjs": "^5.5.8"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
   }
 }
