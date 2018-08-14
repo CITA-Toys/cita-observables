@@ -1,7 +1,7 @@
-![Build Status](https://travis-ci.org/CITA-Toys/cita-observables.svg?branch=master)
-[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/@cita/observables)
-[![npm type definitions](https://img.shields.io/npm/types/chalk.svg)](https://www.npmjs.com/package/@cita/observables)
-![npm](https://img.shields.io/npm/l/express.svg)
+![Travis](https://travis-ci.org/cryptape/cita-observables.svg?branch=develop)
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/@nervos/observables)
+[![MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/cryptape/cita-observables)
+[![AppChain](https://img.shields.io/badge/made%20for-Nervos%20AppChain-blue.svg)](https://appchain.nervos.org/)
 
 # CITA-Observables
 
